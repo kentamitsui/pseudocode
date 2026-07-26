@@ -1,6 +1,14 @@
-# 目標： 電話帳の先頭から順に名前を探すように、リストの先頭から順に目的のデータを確認します。
-# ステップ1（自然な日本語）： リストの左端から1つずつ順番に目的の名前と照らし合わせます。見つかった瞬間に探索を終え、
-# 最後まで見つからなければ「存在しない」と報告します。
-# ステップ2（構造化擬似コード）：
-# ステップ3（Pythonコード）：
+def target_search(items: list[int], targetItem: int) -> bool:
+    for value in items:
+        if value == targetItem:
+            return True
+    return False
 
+
+target: int = 3
+checklist_1: list[int] = [1, 2, 3, 4, 5]  # 想定されるreturn: true
+checklist_2: list[int] = [1, 2, 4, 5]  # 想定されるreturn: false
+
+
+print(target_search(checklist_1, target))
+print(target_search(checklist_2, target))
