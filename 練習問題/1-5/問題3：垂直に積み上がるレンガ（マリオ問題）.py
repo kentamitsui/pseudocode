@@ -1,5 +1,3 @@
-
-
 def stackBricks(height: int) -> list[str]:
     result: list[str] = []
 
