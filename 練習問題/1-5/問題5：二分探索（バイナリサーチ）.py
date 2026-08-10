@@ -1,5 +1,4 @@
 import random
-import math
 
 
 def binary_search(arr: list[int], target: int) -> bool:
@@ -7,7 +6,7 @@ def binary_search(arr: list[int], target: int) -> bool:
     high: int = len(arr) - 1
 
     while low <= high:
-        mid: int = math.floor((low + high) / 2)
+        mid: int = (low + high) // 2
         if (target == arr[mid]):
             return True
         elif (target < arr[mid]):
